@@ -7,10 +7,11 @@
 
 /* Colores personalizados */
 :root {
-  --primary-orange: #f3603b;
-  --secondary-blue: #242e52;
-  --description-color: #b3b2b7;
-  --footer-color: #1e1e26;
+  --primary-orange: rgb(242, 95, 58);
+  --secondary-orange: rgb(255, 239, 234);
+  --secondary-blue: rgb(35, 44, 81);
+  --description-color: rgb(143, 148, 167);
+  --footer-color: rgb(29, 30, 37);
 }
 
 body {
@@ -80,13 +81,21 @@ header div .nav-bar {
 
 /* Botones */
 .button-orange {
-  background: var(--primary-orange);
+  background-color: var(--primary-orange);
   border-radius: 50px;
   border: var(--primary-orange);
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
   color: white;
   padding: 18px 38px;
+  transition: background-color 0.3s ease;
 }
+
+.button-orange:hover{
+  background-color: var(--secondary-orange);
+  color: var(--primary-orange);
+  cursor: pointer;
+}
+
 
 .button-white {
   background: white;
@@ -95,7 +104,14 @@ header div .nav-bar {
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
   color: var(--primary-orange);
   padding: 18px 38px;
+  transition: background-color 0.3s ease;
 }
+
+.button-white:hover{
+  background: var(--secondary-orange);
+  cursor: pointer;
+}
+
 
 header div button.button-orange {
   position: relative;
@@ -196,7 +212,7 @@ h4 {
 
 .cards {
   position: relative;
-  background: #fafafa;
+  background: rgb(249, 249, 249);
   color: var(--description-color);
   font-weight: 500;
   height: 220px;
