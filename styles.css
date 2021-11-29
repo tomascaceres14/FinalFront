@@ -14,13 +14,6 @@
   --footer-color: rgb(29, 30, 37);
 }
 
-body {
-  width: 1440px;
-  padding-top: 70px;
-  position: relative;
-  left: 12.5%;
-}
-
 /* Eliminar decoracion de links */
 a:link {
   text-decoration: none;
@@ -45,16 +38,36 @@ ul.footer-ul a:visited {
   text-decoration: none;
   color: white;
 }
-ul.footer-ul a{
+ul.footer-ul a {
   text-decoration: none;
   color: white;
 }
 /* Header */
 header {
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-right: 150px;
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-between;
   font-weight: 500;
+}
+
+main {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  main {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 header .nav {
@@ -72,6 +85,11 @@ header div .nav-bar {
   padding-right: 400px;
 }
 
+@media screen and (max-width: 375px) {
+  header div ul.nav-bar {
+    display: none;
+  }
+}
 /*menu plegado en mobile*/
 @media screen and (min-width: 375px) {
   #i {
@@ -90,12 +108,11 @@ header div .nav-bar {
   transition: background-color 0.3s ease;
 }
 
-.button-orange:hover{
+.button-orange:hover {
   background-color: var(--secondary-orange);
   color: var(--primary-orange);
   cursor: pointer;
 }
-
 
 .button-white {
   background: white;
@@ -107,11 +124,10 @@ header div .nav-bar {
   transition: background-color 0.3s ease;
 }
 
-.button-white:hover{
+.button-white:hover {
   background: var(--secondary-orange);
   cursor: pointer;
 }
-
 
 header div button.button-orange {
   position: relative;
@@ -120,6 +136,7 @@ header div button.button-orange {
 
 .container1 {
   display: flex;
+  flex-wrap: wrap-reverse;
   width: 100%;
   justify-content: space-between;
   margin-top: 150px;
@@ -148,6 +165,7 @@ section.container1 div.div1 button.button-orange {
 
 .about {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
   margin-top: 150px;
@@ -227,7 +245,7 @@ h4 {
 .card-img {
   position: absolute;
   bottom: 185px;
-  left: 204px;
+  left: 232px;
 }
 
 .card-text {
@@ -248,6 +266,7 @@ h4 {
   color: white;
   display: flex;
   justify-content: space-around;
+  padding-left: 0;
 }
 
 .main-end-text {
@@ -278,7 +297,7 @@ footer {
   width: 0px;
 }
 
-.invert-logo{
+.invert-logo {
   padding-top: 20px;
 }
 
@@ -299,11 +318,11 @@ footer {
   gap: 200px;
 }
 
-.footer-ul{
+.footer-ul {
   list-style: none;
 }
 
-.form{
+.form {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -313,7 +332,7 @@ footer {
   justify-content: flex-end;
 }
 
-.input1{
+.input1 {
   background: white;
   border: white;
   border-radius: 50px;
@@ -323,11 +342,11 @@ footer {
   padding-left: 10px;
 }
 
-button.button-orange{
+button.button-orange {
   padding: 18px 30px;
 }
 
-section.form p{
+section.form p {
   color: var(--description-color);
   font-weight: 300;
   font-size: 12px;
