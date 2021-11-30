@@ -31,19 +31,19 @@ a {
 /* color invertido */
 ul.footer-ul a:link {
   text-decoration: none;
-  color: white;
+  color: var(--description-color);
 }
 
 ul.footer-ul a:visited {
   text-decoration: none;
-  color: white;
+  color: var(--description-color);
 }
 ul.footer-ul a {
   text-decoration: none;
-  color: white;
+  color: var(--description-color);
 }
 
-header .nav {
+.nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -54,25 +54,17 @@ header .nav {
   padding-top: 100px;
 }
 
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 header div ul.nav-bar {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   list-style: none;
-
-}
-
-@media screen and (max-width: 376px) {
-  header div ul.nav-bar {
-    display: none;
-  }
-}
-
-/*menu plegado en mobile*/
-@media screen and (min-width: 376px) {
-  #i {
-    display: none;
-  }
 }
 
 /* Botones */
@@ -115,15 +107,17 @@ header div button.button-orange {
 .container1 {
   display: flex;
   flex-wrap: wrap-reverse;
+  align-items: center;
   justify-content: center;
   margin-top: 150px;
   gap: 5%;
+  width: 100%;
 }
 
 h1 {
   color: var(--secondary-blue);
   font-weight: 700;
-  font-size: 58px;
+  font-size: 34px;
   width: 495px;
   height: 12px;
 }
@@ -132,8 +126,17 @@ h1 {
   font-weight: 500;
   font-size: 16.56px;
   width: 360px;
-  padding-top: 230px;
+  padding-top: 160px;
+  padding-bottom: 60px;
   line-height: 26.01px;
+}
+
+.div1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 150px;
+  gap: 5%;
 }
 
 section.container1 div.div1 button.button-orange {
@@ -141,7 +144,7 @@ section.container1 div.div1 button.button-orange {
   top: 25px;
 }
 
-.chart{
+.chart {
   width: 100%;
   height: 100%;
 }
@@ -149,11 +152,10 @@ section.container1 div.div1 button.button-orange {
 .about {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   align-items: center;
   justify-content: center;
   margin-top: 150px;
-  gap: 200px;
+  gap: 5%;
 }
 
 h2 {
@@ -173,7 +175,6 @@ h2 {
 
 .about-list {
   list-style: none;
-  width: 50%;
 }
 
 h4 {
@@ -215,7 +216,6 @@ h4 {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  
 }
 
 .cards {
@@ -235,7 +235,7 @@ h4 {
 
 .card-img {
   position: absolute;
-  bottom: 185px;
+  bottom: 190px;
   left: 207px;
 }
 
@@ -257,8 +257,11 @@ h4 {
   background-color: var(--primary-orange);
   color: white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding-left: 0;
+  width: 100%;
+  height: 350px;
 }
 
 .main-end-text {
@@ -272,6 +275,7 @@ h4 {
 section.main-end button.button-white {
   position: relative;
   top: 20px;
+  margin-bottom: 50px;
 }
 
 footer {
@@ -280,13 +284,15 @@ footer {
   justify-content: space-around;
   background-color: var(--footer-color);
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .footer-section1 {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  width: 0px;
+  align-items: center;
+  width: 180px;
+  gap: 20px;
 }
 
 .invert-logo {
@@ -295,6 +301,7 @@ footer {
 
 .icons {
   display: flex;
+  flex-wrap: wrap;
   gap: 14px;
   align-items: center;
 }
@@ -302,12 +309,12 @@ footer {
 .footer-section2 {
   color: white;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: flex-start;
   width: 600px;
-  padding-left: 200px;
   line-height: 40px;
-  gap: 200px;
+  gap: 20%;
 }
 
 .footer-ul {
@@ -318,10 +325,9 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-end;
   padding-top: 20px;
   width: 350px;
-  justify-content: flex-end;
 }
 
 .input1 {
@@ -331,15 +337,144 @@ footer {
   color: var(--description-color);
   font-weight: 500;
   padding: 18px 38px;
-  padding-left: 10px;
 }
 
-button.button-orange {
+section.form button.button-orange {
   padding: 18px 30px;
+  margin-left: 10px;
 }
 
 section.form p {
   color: var(--description-color);
   font-weight: 300;
   font-size: 12px;
+}
+
+@media screen and (max-width: 375px) {
+  .nav {
+    justify-content: center;
+    gap: 130px;
+    width: 100%;
+  }
+
+  header div ul.nav-bar {
+    display: none;
+  }
+
+  header div button.button-orange {
+    display: none;
+  }
+
+  .container1 {
+    margin-top: 0px;
+  }
+
+  .intro {
+    width: 375px;
+    margin-top: 30px;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    width: 300px;
+    text-align: center;
+  }
+
+  .undertitle-h1 {
+    text-align: center;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    width: 350px;
+    text-align: center;
+  }
+
+  ol h4 {
+    background-color: var(--secondary-orange);
+    height: 25px;
+  }
+  .undertitle-h2 {
+    text-align: center;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+  }
+
+  .numbers {
+    position: relative;
+    top: 0px;
+    right: 5px;
+    padding: 8px 8px;
+  }
+
+  .desc {
+    color: var(--description-color);
+    padding-bottom: 40px;
+    padding-top: 28px;
+    width: 330px;
+  }
+
+  .card-img {
+    position: absolute;
+    bottom: 190px;
+    left: 155px;
+  }
+
+  .main-end-text {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .form {
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .input1 {
+    background: white;
+    border: white;
+    border-radius: 50px;
+    color: var(--description-color);
+    font-weight: 500;
+    padding: 13px 38px;
+  }
+
+  section.form button.button-orange {
+    padding: 13px 20px;
+  }
+
+  section.form p {
+    position: absolute;
+    top: 330px;
+    left: 60px;
+  }
+}
+
+/*menu plegado en mobile*/
+@media screen and (min-width: 376px) {
+  #i {
+    display: none;
+  }
 }
