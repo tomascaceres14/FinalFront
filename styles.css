@@ -49,11 +49,16 @@ header {
   padding-right: 150px;
   display: flex;
   flex-wrap: wrap-reverse;
+  align-items: center;
   justify-content: space-between;
   font-weight: 500;
 }
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   padding-left: 150px;
   padding-right: 150px;
 }
@@ -72,26 +77,30 @@ main {
 
 header .nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   list-style: none;
+  width: 100%;
 }
 
-header div .nav-bar {
+header div ul.nav-bar {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   list-style: none;
-  padding-right: 400px;
+
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
   header div ul.nav-bar {
     display: none;
   }
 }
+
 /*menu plegado en mobile*/
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 376px) {
   #i {
     display: none;
   }
@@ -138,8 +147,9 @@ header div button.button-orange {
   display: flex;
   flex-wrap: wrap-reverse;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 150px;
+  gap: 200px;
 }
 
 h1 {
@@ -163,12 +173,18 @@ section.container1 div.div1 button.button-orange {
   top: 25px;
 }
 
+/* .chart{
+  width: 100%;
+  height: 100%;
+} */
+
 .about {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 150px;
+  gap: 200px;
 }
 
 h2 {
@@ -216,6 +232,7 @@ h4 {
 
 .people {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -224,8 +241,10 @@ h4 {
   font-size: 39.21px;
   padding-top: 130px;
   padding-bottom: 130px;
-  position: relative;
-  left: 553px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .cards {
@@ -236,16 +255,17 @@ h4 {
   height: 220px;
   line-height: 25px;
   text-align: center;
-  width: 33.33%;
+  width: 480px;
   padding-top: 60px;
   padding-right: 20px;
   padding-left: 20px;
+  margin-bottom: 45px;
 }
 
 .card-img {
   position: absolute;
   bottom: 185px;
-  left: 232px;
+  left: 207px;
 }
 
 .card-text {
@@ -258,6 +278,7 @@ h4 {
   justify-content: center;
   padding-top: 50px;
   padding-bottom: 170px;
+  width: 100%;
 }
 
 .main-end {
